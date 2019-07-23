@@ -1,25 +1,10 @@
 
-public class Decoracio {
-	private String nom;
+public class Decoracio extends Product{
 	private String material;
-	private double preu;
-	private static int id = 1;
 
 	public Decoracio(String nom, String material, double preu) {
-		this.nom=nom;
-		this.material = material;
-		this.preu = preu;
-		this.id=id;
-		id ++;
-		
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public String getNom() {
-		return nom;
+		super(nom, preu);
+		this.material = material;		
 	}
 
 	public void setMaterial(String x) {
@@ -30,19 +15,5 @@ public class Decoracio {
 		return material;
 	}
 
-	public void setPreu(double x) {
-		preu = x;
-	}
-
-	public double getPreu() {
-		return preu;
-	}
-	
-	public int getId() {
-		return id;
-	}
-	public String toString() {
-		return nom + ", ";
-	}
 
 }

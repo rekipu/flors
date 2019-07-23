@@ -1,25 +1,14 @@
 
-public class Arbre {
-	private String nom;
+public class Arbre extends Product {
+	
 	private double altura;
-	private double preu;
-	private static int id = 1;
+
 	
 	public Arbre(String nom, double altura, double preu) {
-		this.nom=nom;
+		super(nom, preu);
 		this.altura = altura;
-		this.preu = preu;
-		this.id=id;
-		id++;
+	
 		
-	}
-	
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-	
-	public String getNom() {
-		return nom;
 	}
 	
 	public void setAltura(double x) {
@@ -30,19 +19,5 @@ public class Arbre {
 		return altura;
 	}
 	
-	public void setPreu(double x) {
-		preu = x;
-	}
-	
-	public double getPreu() {
-		return preu;
-	}
-	
-	public int getId() {
-		return id;
-	}
-	public String toString() {
-		return nom + ", ";
-	}
 	
 }
